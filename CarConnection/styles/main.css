@@ -1,9 +1,9 @@
 /* IMAGES */
 .welcome-image {
-    background-image: url(../styles/images/appbuilder.png);
+    background-image: url(../styles/images/splash.png);
     background-repeat: no-repeat;
-    width: 320px;
-    height: 250px;
+    width: 640px;
+    height: 960px;
     display: block;
     margin: 0px auto;
 }
@@ -13,7 +13,7 @@
     width: 319px;
     height: 60px;
     display: block;
-    margin: 0px auto;
+    margin: 20px auto;
 }
 
 /* LOGIN VIEW STYLES */
@@ -129,7 +129,7 @@
 /* RETINA DISPLAY STYLES */
 @media only screen and (-webkit-min-device-pixel-ratio: 2),(min-resolution: 192dpi) {
     .welcome-image {
-        background-image: url(../styles/images/appbuilder2x.png);
+        background-image: url(../styles/images/splash2x.png);
         background-size: 100%;
     }
     .logo-image {

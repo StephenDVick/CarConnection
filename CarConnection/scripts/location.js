@@ -8,6 +8,7 @@
         _lastMarker: null,
         _isLoading: false,
 
+        vehicleName: "Hassan Car",
         address: "",
         isGoogleMapsInitialized: false,
 
@@ -17,6 +18,7 @@
 
             that._isLoading = true;
             that.toggleLoading();
+            that.vehicleName = 'Hassan Car';
 
             navigator.geolocation.getCurrentPosition(
                 function (position) {

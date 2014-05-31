@@ -6,20 +6,26 @@
         isLoggedIn: false,
         username: "",
         password: "",
-
+        
         onLogin: function () {
+            kendo.mobile.application.showLoading();
             var that = this,
                 username = that.get("username").trim(),
                 password = that.get("password").trim();
-
+			
+            
             if (username === "" || password === "") {
                 navigator.notification.alert("Both fields are required!",
                     function () { }, "Login failed", 'OK');
 
+                kendo.mobile.application.hideLoading();
                 return;
             }
-
-            that.set("isLoggedIn", true);
+            
+            setTimeout(function () { 
+                that.set("isLoggedIn", true);
+                kendo.mobile.application.hideLoading();
+                app.application.navigate('#dashboard', 'zoom'); }, 2000);
         },
 
         onLogout: function () {
